@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1731867792 source:c:\uni\6semestras\c++\uzduotys\kursinis\siuntu tarnyba\main.cpp
+	<iostream>
+	<fstream>
+	<cmath>
+	<cstring>
+

@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1731867219 source:c:\uni\6semestras\c++\uzduotys\kursinis\kauliukai\main.cpp
+	<iostream>
+	<fstream>
+	<cstring>
+
+1734769421 source:c:\uni\7semestras\kursinis\kursinis\kauliukai\main.cpp
+	<iostream>
+	<fstream>
+	<cstring>
+

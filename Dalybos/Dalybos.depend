@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1734771308 source:c:\uni\7semestras\kursinis\kursinis\dalybos\main.cpp
+	<iostream>
+	<fstream>
+

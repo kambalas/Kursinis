@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1731868561 source:c:\uni\6semestras\c++\uzduotys\kursinis\avys\main.cpp
+	<iostream>
+	<fstream>
+	<cstring>
+

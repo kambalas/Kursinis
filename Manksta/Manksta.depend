@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1731869147 source:c:\uni\7semestras\kursinis\kursinis\manksta\main.cpp
+	<iostream>
+	<fstream>
+	<cstring>
+

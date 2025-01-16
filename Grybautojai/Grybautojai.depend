@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1731858555 source:c:\uni\6semestras\c++\uzduotys\kursinis\grybautojai\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+
+1736965012 source:c:\uni\7semestras\kursinis\kursinis\grybautojai\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+

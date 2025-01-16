@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1734687637 source:c:\uni\7semestras\kursinis\kursinis\sokiai\main.cpp
+	<iostream>
+	<fstream>
+	<cstring>
+
