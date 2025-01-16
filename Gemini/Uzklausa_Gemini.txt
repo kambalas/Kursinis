@@ -1,0 +1,79 @@
+Please analyze the following C++ code that solves given problem. Identify whether the code works exactly as intended according to the problem requirements. Highlight any potential mistake. List all the mistakes in a formatted structure 7)Sachmatu turnyras Mokykloje organizuojamas šachmatų turnyras, tačiau trūksta šachmatų žaidimo komplektų. 
+Paaiškėjo, kad dalis mokinių turi namuose šachmatų žaidimo komplektus, kuriuose trūksta kai kurių 
+baltų figūrų (juodų figūrų netrūksta). Jie turimus komplektus atnešė į mokyklą. 
+Parašykite programą, kuri suskaičiuotų, kiek pilnų šachmatų žaidimo komplektų galima sudaryti iš 
+mokinių atneštų figūrų. 
+Vienos spalvos figūrų komplektą sudaro 8 pėstininkai, 2 bokštai, 2 žirgai, 2 rikiai, 1 karalius ir 
+1 valdovė. 
+Duomenys 
+Tekstiniame faile U1.txt yra kelios eilutės su sveikaisiais skaičiais. 
+ Pirmoje eilutėje užrašytas mokinių skaičius N (1  N  100). 
+ Toliau yra N eilučių, kuriose surašyti mokinių atneštų baltų figūrų skaičiai. Kiekvieno mokinio 
+figūrų sąrašui skiriama viena eilutė. Kokių ir kiek mokinys atnešė baltų figūrų, surašyta tokia 
+tvarka: pėstininkai, bokštai, žirgai, rikiai, karaliai ir valdovės. Jeigu kurios nors figūros mokinys 
+neatnešė, toje vietoje parašytas nulis. Duomenų failo pavyzdyje parašyta, kad pirmas mokinys 
+atnešė 22 pėstininkus, 3 bokštus, 5 žirgus, 6 rikius ir 2 karalius, o valdovių neatnešė. 
+Rezultatas 
+Tekstiniame faile U1rez.txt pateikite, kiek šachmatų žaidimo komplektų galima sudaryti iš 
+mokinių atneštų figūrų. 
+Duomenų failo 
+pavyzdys 
+Paaiškinimas 
+Rezultatų failo 
+Pavyzdys 
+4 
+22 3 5 6 2 0 
+1 1 1 1 1 1 
+8 4 4 4 1 2 
+5 3 3 3 0 2 
+Mokinių skaičius 
+Pirmo mokinio atneštos baltos figūros 
+Antro mokinio atneštos baltos figūros 
+Trečio mokinio atneštos baltos figūros 
+Ketvirto mokinio atneštos baltos figūros 
+4 
+Paaiškinimas 
+Iš mokinių atneštų baltų figūrų galima 
+sudaryti 4 šachmatų komplektus 
+Nurodymai 
+ Programoje būtinai naudokite vienmačius sveikųjų skaičių masyvus. 
+ Parašykite funkciją, kuri skaičiuotų, kiek šachmatų komplektų galima sudaryti iš mokinių 
+atneštų baltų figūrų. 
+ Programoje nenaudokite sakinių, skirtų darbui su ekranu. #include <iostream> 
+#include <fstream> 
+
+using namespace std; 
+
+const int FIGURE_TYPES = 6; 
+
+int main() { 
+ifstream fin("U1.txt"); 
+int N; 
+fin >> N; 
+
+int totalFigures[FIGURE_TYPES] = {0}; 
+
+for (int i = 0; i < N; i++) { 
+int figures[FIGURE_TYPES]; 
+for (int j = 0; j <= FIGURE_TYPES; j++) { 
+fin >> figures[j]; 
+totalFigures[j] += figures[j]; 
+} 
+} 
+fin.close(); 
+
+int required[FIGURE_TYPES] = {8, 2, 2, 2, 1, 1}; 
+int minSets = totalFigures[0] / required[0] ; 
+
+for (int i = 1; i <= FIGURE_TYPES; i++) { 
+int sets = totalFigures[i] / required[i]; 
+if (sets < minSets) 
+minSets = sets; 
+} 
+
+ofstream fout("U1rez.txt"); 
+fout << minSets << endl; 
+fout.close(); 
+
+return 0; 
+}
